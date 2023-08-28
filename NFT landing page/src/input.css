@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap");
+
+.bg-clip {
+  clip-path: ellipse(125% 100% at top center);
+}
+.bg-gradient-heading {
+  background-image: linear-gradient(
+    to top,
+    #ff00f4,
+    #e514ec,
+    #cb1de2,
+    #b222d8,
+    #9924cd
+  );
+}
+.bg-purple {
+  background: #160e2a;
+}
+.bg-gradient-button {
+  background: linear-gradient(to right, #04dce6, #a504e6);
+}
+.bg-gradient-lower-section {
+  background: #a50aff;
+  background: radial-gradient(
+    circle farthest-side at left center,
+    #a50aff 0%,
+    #160e2a 25%
+  );
+}
+.bg-clip-cresent {
+  clip-path: ellipse(150% 100% at top center);
+}
+.bg-gradient-cresent {
+  clip-path: ellipse(100% 100% at top center);
+  background: #a50aff;
+  background: radial-gradient(
+    circle farthest-side at center center,
+    #a50aff 0%,
+    #160e2a 100%
+  );
+}
+.bg-image-gradient {
+  background: #4c00ff;
+  background: linear-gradient(to bottom right, #4c00ff 0%, #be0aff 100%);
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
