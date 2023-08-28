@@ -1,0 +1,177 @@
+
+
+.navigation{
+    display: flex;
+    padding-top: 20px;
+
+}
+
+.lists{
+    display: flex;
+    list-style: none;
+ 
+    gap: 40px;
+    margin-left: 70px;
+    margin-top: 8px;
+}
+.mobile1{
+    visibility: hidden;
+}
+.lists li a{
+    color: gray;
+    text-decoration: none;
+}
+.heading h3{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.buttons{
+    margin-left: 200px;
+    background-color: white;
+    
+    
+}
+.buttons button{
+    width: 80px;
+    height: 35px;
+background-color: azure;
+
+}
+.head{
+    margin-left: 30px;
+}
+.content p{
+    border-left: 1px solid black;
+    padding: 5px;
+}
+.switches{
+    display: flex;
+    gap: 9px;
+}
+.switches button{
+    border-radius: 0.5px;
+    border: .1px solid black;
+    width: 90px;
+    height: 25px;
+   
+}
+.middle{
+    display: grid;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 70px;
+    scale: 1;
+}
+.pehchan1{
+    visibility: hidden;
+}
+.pehchan2{
+    visibility: hidden;
+}
+.second{
+    margin-top: 30px;
+}
+.footers{
+    margin-top: 10px;
+   
+    /* margin-left: 50px; */
+    background-color: rgb(17, 23, 54);
+    background-size: cover;
+    width: 100%;
+    color: rgb(163, 170, 174);
+}
+.other{
+    display: flex;
+     gap: 25PX;
+     margin-top: 25px;
+     margin-left: 80px;
+    
+}
+.firstfoot{
+    margin-left: 60px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .middle{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .lists{
+        display: none;
+    }
+    .buttons{
+        display: none;
+    }
+    .footers footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .other{
+        flex-direction: column;
+        /* text-align: center; */
+    }
+    .second{
+        /* text-align: center; */
+        justify-content: center;
+        position: relative;
+        top: -160px;
+    }
+    .ekjesa{
+        margin-left: 29px;
+    }
+    .content p{
+        margin-left: 29px;
+    }
+    .switches{
+        position: relative;
+        top: 350px;
+        gap: 80px;
+       
+    }
+    .switches .buton1{
+        position: relative;
+        margin-left: 80px;
+    }
+    .switches button{
+        scale: 1.5;
+       
+    }
+    .switches img{
+        position: relative;
+top: 55px;
+scale: .6;
+margin-left: -200px;
+    }
+    .head{
+        position: relative;
+        margin-left: 70px;
+        margin-top: 10px;
+        scale: 0.7;
+    }
+    /* .mobile1{
+        
+        visibility: visible;
+        
+    } */
+    .pehchan1{
+        visibility: visible;
+       position: relative;
+       margin-top: 12px;
+       margin-left: 15px;
+    }
+    .pehchan2{
+        visibility: visible;
+        position: relative;
+        margin-left: 100px;
+        margin-top: 20px;
+        scale: 1.1;
+    }
+    
+    
+    
+  }
+

@@ -1,0 +1,156 @@
+.container1{
+    background-image: url(assets/background.png);
+    background-size: cover;
+    height: 90vh;
+}
+.content{
+    justify-content: center;
+    align-items: center;
+}
+.content2{
+    margin-left: 40vw;
+    margin-top: 15vh;
+    background-color: white;
+    height: 50vh;
+    padding: 25px;
+    border-radius: 8px;
+    position: relative;
+}
+form label{
+    margin: 1vh;
+}
+form input{
+    margin: 1vh;
+    /* height: 5vh; */
+    background-color: rgb(215, 213, 213);
+}
+.content1{
+    position: relative;
+    /* margin-left: 50px; */
+}
+.forms h2{
+    margin-top: -15px;
+}
+ form button{
+   margin-left: 2.6vw;
+   margin-top: 3vh;
+   background-color: blue;
+   color: aliceblue;
+   border-radius:.5vh;
+}
+.navigation{
+    margin-left: 120px;
+    gap: 20px;
+}
+.navigation .patti {
+    margin-top: 20px;
+    list-style: none;
+  
+    
+}
+.container4card{
+    margin: 15px;
+}
+.card5{
+    margin: .05vw;
+}
+.container3{
+    background-color: rgb(244, 241, 241)
+}
+.container3card{
+    border:1px solid white;
+    width: 250px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 3px;
+    scale: 0.70;
+    margin: -30px;
+    
+}
+.navigation h4{
+    color: white;
+}
+.patti li a{
+    color: white;
+   text-decoration: none;
+}
+.navigation button{
+    margin-top: 20px;
+    margin-left: 190px;
+}
+.patti{
+    margin-left: 60px;
+    display: flex;
+    gap: 10px;
+}
+
+.card{
+    width: 20vw;
+    border: 2px solid rgb(55, 151, 203);
+    border-radius: 8px;
+    margin: 12px;
+    
+}
+.navb{
+    display: flex;
+}
+.lists{
+    text-align: center;
+    margin-top: 5vh;
+    color: gray;
+    font-size: 1.3vw;
+}
+.carda{
+    height: 15vh;
+    display: flex;
+    background-color: rgb(55, 151, 203);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.khatka{
+    gap: 10px;
+}
+.khatka button{
+    width: 13vw;
+    height: 8vh;
+    border-radius: 28px;
+    background: none;
+    color: white;
+}
+#borders{
+    border: 1px solid white;
+}
+#blues{
+    background-color: rgb(56, 56, 202);
+    border: none;
+}
+.navigation button{
+    width: 12vw;
+    height: 7vh;
+    background-color: rgb(58, 58, 196);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+    .container1{
+        background-size: 70%;
+        background-repeat: no-repeat;
+        height: 600px;
+    }
+    .navigation {
+        margin-left: -180px;
+        scale: 0.30;
+        margin-top: -30px;
+    }
+    .navigation button{
+        margin-left: 40px;
+        height: 50px;
+        width: 90px;
+    }
+    .content{
+        margin-left: -100px;
+        margin-top: -280px;
+        scale: 0.2;
+    }
+  }
