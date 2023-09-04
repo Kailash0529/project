@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="text">Your image is visible</h1>
+        <button style="display: block;" id="btn">Toggle image</button>
+        <img src="aditya-joshi-UgSmjCMjW_I-unsplash.jpg" alt="" id="imaged" style="width: 400px;margin-top: 25px;">
+    </div>
+    <script>
+        const heading=document.getElementById("text");
+        const buttons=document.getElementById("btn");
+        const images=document.getElementById("imaged");
+        buttons.addEventListener('click',()=>{
+            if(heading.textContent==="Your image is visible"){
+                images.style.visibility="hidden";
+                heading.textContent="Your image is hidden";
+            }
+            else if(heading.textContent==="Your image is hidden"){
+                images.style.visibility="visible";
+                heading.textContent="Your image is visible";
+            }
+            
+        })
+    </script>
+</body>
+</html>

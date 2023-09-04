@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mode" style="border: 4px solid black; height: 200px; background-color: white;">
+        <h1 class="matter">This light mode</h1>
+        <button id="btn">Toggle Theme</button>
+    </div>
+    <script>
+        const buttons= document.getElementById("btn");
+        const modes=document.getElementsByClassName("mode");
+        
+        buttons.addEventListener('click',()=>{
+            const mode=modes[0];
+            const color=mode.style.backgroundColor;
+            if (color === "white") {
+  document.querySelector(".matter").textContent="This is dark mode";
+mode.style.backgroundColor="black"
+document.querySelector(".matter").style.color="white"
+
+}
+else
+{
+    mode.style.backgroundColor="white"
+    document.querySelector(".matter").style.color="black"
+    document.querySelector(".matter").textContent="This is light mode";
+
+}
+
+        })
+        
+    </script>
+</body>
+</html>

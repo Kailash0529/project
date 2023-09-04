@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-top: 80px; margin-left: 30px;">
+        <h1>Counter</h1>
+   
+    <div class="calci" style="display: flex;margin-left: 28px;">
+        <button id="sub">-</button>
+        <span id="digit"></span>
+        <button id="add">+</button>
+    </div>
+</div>
+    <script>
+        const buttonadd=document.getElementById("add");
+        const digits=document.getElementById("digit");
+       
+        let i=0;
+        digits.textContent=i;
+        const buttonsub=document.getElementById("sub");
+        buttonadd.addEventListener('click',() => {
+i=i+1;
+digits.textContent=i;
+        })
+        buttonsub.addEventListener('click',() => {
+i=i-1;
+if(i<0)
+{
+    i=0;
+    digits.textContent=i;
+    alert("Counter is going beyond zero");
+}
+digits.textContent=i;
+        })
+        
+    </script>
+</body>
+</html>
