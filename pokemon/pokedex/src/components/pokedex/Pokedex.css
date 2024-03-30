@@ -1,0 +1,9 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.pokedexheading{
+    margin: 0 auto;
+    letter-spacing: 5px;
+}
