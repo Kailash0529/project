@@ -1,0 +1,16 @@
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pokedexheading{
+    margin: 0 auto;
+    letter-spacing: 5px;
+    
+
+    
+}
+a:visited{
+    color: black;
+
+}

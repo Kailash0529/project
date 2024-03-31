@@ -35,7 +35,7 @@ return{id:pokedata.id,name:pokedata.name,image:(pokedata.sprites.other) ? pokeda
 return(
    <div className="pokemon-list-wrapper"> 
    <div className="pokemon-wrapper">
-    {(isLoading )? 'loading':pokemonList.map((p)=><Pokemon name={p.name} image={p.image} key={p.id}/>)}
+    {(isLoading )? 'loading':pokemonList.map((p)=><Pokemon name={p.name} image={p.image} key={p.id} id={p.id}/>)}
     </div>
     <div className="controls">
         <button disabled={prevUrl==null} onClick={()=>setPokedexUrl(prevUrl)}>prev</button>
