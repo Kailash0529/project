@@ -1,23 +1,30 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function usePokemonList(url)
+function usePokemonList()
 {
-    const [pokemonListstate,setPokemonListState]=useState({
+    const [pokemonListState,setPokemonListState]=useState({
         isLoading:true,
         pokemonList:[],
-        pokedexUrl:url,
+        pokedexUrl:'https://pokeapi.co/api/v2/pokemon/',
         prevUrl:'',
-        nextUrl:''
+        nextUrl:'',
+        
     });
-
     async function download()
     {
         // setIsLoading(true);
-        setPokemonListState({...pokemonListstate,isLoading:true});
-        const response=await axios.get(pokemonListstate.pokedexUrl);
-        const pokeResults=response.data.results;
-        console.log(pokeResults);
+      
+       
+            setPokemonListState((state)=>({...state,isLoading:true}));
+            const response=await axios.get(pokemonListState.pokedexUrl);
+            const pokeResults=response.data.results;
+            console.log(pokeResults);
+            setPokemonListState((state)=>({
+    ...state,
+    nextUrl:response.data.next,
+    prevUrl:response.data.previous
+            }));
         const resultskeandar= pokeResults.map((poke)=>axios.get(poke.url));
         const dataeksath=await axios.all(resultskeandar);
         const res=dataeksath.map((poke)=>{
@@ -28,21 +35,18 @@ return{id:pokedata.id,name:pokedata.name,image:(pokedata.sprites.other) ? pokeda
         });
         // console.log(res);
         // setPokemonList(res);
-        setPokemonListState({...pokemonListstate,pokemonList:res,isLoading:false,prevUrl:response.data.previous,nextUrl:response.data.next});
-        // setIsLoading(false);
-        
-        
+        setPokemonListState((pokemonListState)=>({...pokemonListState,pokemonList:res,isLoading:false}));
 
+        // setIsLoading(false);
         // setPrevUrl(response.data.previous);
         // setPokemonListState({...pokemonListstate,prevUrl:response.data.previous,nextUrl:response.data.next});
-        
-
         // console.log(prevUrl,nextUrl);
         // setNextUrl(response.data.next);
-    }
+    
+}
     useEffect(()=>{
         download();
-    },[pokemonListstate.pokedexUrl]);
-    return{ pokemonListstate,setPokemonListState};
+    },[pokemonListState.pokedexUrl]);
+    return[ pokemonListState,setPokemonListState];
 }
 export default usePokemonList;

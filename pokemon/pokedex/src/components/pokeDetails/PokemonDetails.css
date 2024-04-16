@@ -30,7 +30,7 @@
 .types
 {
     display: flex;
-    font-size:x-large;
+    font-size:xx-large;
     margin-top: 5rem;
     letter-spacing: 2rem;
     font-weight: bold;
@@ -39,4 +39,12 @@
 .image{
     max-height: 200px;
     margin-top: 5rem;
+}
+.more{
+    font-size: medium;
+    margin-top: 1rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
 }

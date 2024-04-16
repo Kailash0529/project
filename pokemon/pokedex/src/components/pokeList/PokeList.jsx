@@ -49,15 +49,15 @@ function PokeList()
 //     useEffect(()=>{
 //         download();
 //     },[pokemonListstate.pokedexUrl]);
-const{pokemonListstate,setPokemonListState}=usePokemonList('https://pokeapi.co/api/v2/pokemon/');
+const[pokemonListState,setPokemonListState]=usePokemonList(false);
 return(
    <div className="pokemon-list-wrapper"> 
    <div className="pokemon-wrapper">
-    {(pokemonListstate.isLoading )? 'loading':pokemonListstate.pokemonList.map((p)=><Pokemon name={p.name} image={p.image} key={p.id} id={p.id}/>)}
+    {(pokemonListState.isLoading )? 'loading':pokemonListState.pokemonList.map((p)=><Pokemon name={p.name} image={p.image} key={p.id} id={p.id}/>)}
     </div>
     <div className="controls">
-        <button disabled={pokemonListstate.prevUrl==null} onClick={()=>setPokemonListState({...pokemonListstate,pokedexUrl:pokemonListstate.prevUrl})}>prev</button>
-        <button disabled={pokemonListstate.nextUrl==null} onClick={()=>setPokemonListState({...pokemonListstate,pokedexUrl:pokemonListstate.nextUrl})}>next</button>
+        <button disabled={pokemonListState.prevUrl==null} onClick={()=>setPokemonListState({...pokemonListState,pokedexUrl:pokemonListState.prevUrl})}>prev</button>
+        <button disabled={pokemonListState.nextUrl==null} onClick={()=>setPokemonListState({...pokemonListState,pokedexUrl:pokemonListState.nextUrl})}>next</button>
     </div>
     </div>
 )
